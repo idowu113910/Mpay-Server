@@ -1,6 +1,5 @@
 const jwt = require("jsonwebtoken");
 
-
 const authMiddleman = (req, res, next) => {
   // Extract the authorization header from the incoming request
   const authHeader = req.headers.authorization;

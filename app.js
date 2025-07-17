@@ -27,7 +27,7 @@ const start = async () => {
 
     console.log("Database Connected");
 
-    app.listen(port, () => {gid
+    app.listen(port, () => {
       console.log(`Server is running on PORT ${port}`);
     });
   } catch (err) {

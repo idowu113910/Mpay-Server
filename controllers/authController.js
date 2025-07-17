@@ -30,7 +30,7 @@ const register = async (req, res) => {
   try {
     const user = await User.create({ email, password: hashedPassword });
 
-    const token = jwt.sign({ userId: user._id }, process.env.jwt_SECRETKey, {
+    const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRETKey, {
       expiresIn: "3d",
     });
 
@@ -66,7 +66,7 @@ const login = async (req, res) => {
   }
 
   // Generate a fresh JWT token
-  const token = jwt.sign({ userId: user._id }, jwt_SECRETKey, {
+  const token = jwt.sign({ userId: user._id }, JWT_SECRETKey, {
     expiresIn: "3d",
   });
 
